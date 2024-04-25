@@ -140,12 +140,15 @@ namespace Subscribers
                     }*/
                 }
                 {
-                    var GetCounSubFrCoun = GetCountSubsctibersFromCountry(); GetCounSubFrCoun.Print();
-                    var GetInterestSubFrCoun = GetInterestingSubsctibersFromCountry("Country 1"); GetInterestSubFrCoun.Print();
-                    var GetSpecialSubFrCoun = GetSpecialProductFromDate("Category 1", new DateTime(2024, 03, 27)); GetSpecialSubFrCoun.Print();
-                    var GetSpecialSubFrSub = GetSpecialProductFromSubscribe("Serg"); GetSpecialSubFrSub.Print();
-                    var GetTopCountryFrSub = GetTopCountryFromSubscribes(); GetTopCountryFrSub.Print();
-                    var GetTopCoun = GetTopCountry(); GetTopCoun.Print();
+                    DataTable[] table = new[]{ GetCountSubsctibersFromCountry(),
+                                                GetInterestingSubsctibersFromCountry("Country 1"),
+                                                GetSpecialProductFromDate("Category 1", new DateTime(2024, 03, 27)),
+                                                GetSpecialProductFromSubscribe("Serg"),
+                                                GetTopCountryFromSubscribes()};
+                    foreach (DataTable data in table)
+                    {
+                        data.Print();
+                    }
                 }
             }
         }
