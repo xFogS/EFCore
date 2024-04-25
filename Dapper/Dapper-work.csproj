@@ -12,4 +12,10 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="PrintData">
+      <HintPath>..\PrintData\bin\Debug\net8.0\PrintData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
